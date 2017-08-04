@@ -1,4 +1,5 @@
-gitignore ignores pickle files due to storage limit on github. Please ask nj227@cornell.edu for mbm data.
+gitignore ignores pickle files due to the storage limit on github. Please ask nj227@cornell.edu for mbm data.
+# Under Simulation folder
 # Chapter 3 of thesis (pseudo-gradient search)
 gradSearchCapsTableRecal, BikeSimCapsTable, SimulationRunnerCapsTable.py:
 - pseudo-gradient search idea using gradient "table"
@@ -26,9 +27,27 @@ gradSearchCapsTableRecal, BikeSimCapsTable, SimulationRunnerCapsTable.py:
 - used for Heuristic 4 in the paper
 - optimizing both bikes and docks
 - considers the stations with AM and PM symmetry
-# Others
+## SimulationRunnerCapsMbm.py, BikeSimMbm.py
+- use this to record minute by minute bike levels
+## test.py, test_gradSearchCapsTable.py
+- unit tests
+## makeCSV.py, objCount.py
+- utility functions
 ## BikeSimCorrals.py
 - with corrals (by Tom)
-## outputsDO
-- ouput files for thesis and WSC paper
-- template for QGIS maps
+# Under data folder
+- Some sample data
+## CTMCVaryRate6-10_15x.txt, CTMCVaryRate6-24_15x.txt
+- the varying rate CTMC solution calculated from 1.5X flow rates of Dec 2015 data, optimizing both bikes and docks from 6-10 am and entire day
+## CTMCVaryRateBikesOnly6-10_15x.txt, CTMCVaryRateBikesOnly6-24_15x.txt
+- only optimizing bikes
+## check*.py
+- utility files for testing purpose
+## durationsLNMultiplier2.txt
+- multipliers for the lognormal durations. See BikeSim for usage.
+## AverageAllocationFromNames.txt
+- equal allocation solution
+# CoordsAndNames.txt
+- station names and coordinates
+# Under outputsDO folder
+- *.qml: templates for QGIS graphs
